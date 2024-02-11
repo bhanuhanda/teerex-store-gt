@@ -4,28 +4,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-import Products from "./pages/Products";
-import Cart from "./pages/Cart";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Products />,
-  },
-  {
-    path: "/cart",
-    element: <Cart />,
-  },
-], {
-  basename: "/teerex-store-gt",
-});
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>,
 );
 
