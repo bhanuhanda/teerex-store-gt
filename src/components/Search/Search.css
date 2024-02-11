@@ -1,0 +1,12 @@
+#search-container {
+    display: flex;
+    justify-content: center;
+}
+
+#search-container > input {
+    width: 50%;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.3rem;
+    border: 1.5px solid #000;
+    margin: 4rem auto 2rem;
+}

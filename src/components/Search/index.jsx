@@ -1,10 +1,12 @@
 import React from 'react'
 
+import './Search.css'
+
 const Search = () => {
   return (
-    <>
-        <input type='text' style={{ border: '1px solid black'}} />
-    </>
+    <div id='search-container'>
+        <input type='text' placeholder='Search for products...' />
+    </div>
   )
 }
 

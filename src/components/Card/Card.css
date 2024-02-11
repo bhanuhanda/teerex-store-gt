@@ -1,0 +1,23 @@
+.card {
+    width: 200px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: .1rem;
+    box-shadow: 10px 10px 23px 10px #efefef;
+    font-size: 1.4rem;
+}
+
+.card-title {
+    margin-bottom: 1rem;
+}
+
+.card-preview {
+    width: 62%;
+    margin: auto;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .5rem;
+}

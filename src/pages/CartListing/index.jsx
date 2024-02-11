@@ -1,3 +1,5 @@
+import './CartListing.css'
+
 function Cart() {
   return <span>Shopping Cart</span>;
 }

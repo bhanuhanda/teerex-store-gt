@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import Cart from "../pages/Cart";
-import Products from "../pages/Products";
-import LayoutWithHeader from "../pages/LayoutWithHeader";
+import Cart from "../pages/CartListing";
+import Products from "../pages/ProductListing";
+import LayoutWithHeader from "../pages/Layout";
 
 const router = createBrowserRouter([
     {
