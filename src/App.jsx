@@ -9,7 +9,7 @@ import { CartDetailsContext, DataContext } from './helpers/context';
 
 const App = () => {
     const [data, setData] = useState([]);
-    const [cartDetails, setCartDetails] = useState([]);
+    const [cartDetails, setCartDetails] = useState(new Map()); // hashmap of <itemId, itemQuantity>
 
     const fetchData = async () => {
         const result = await fetch(DATA_URL);
