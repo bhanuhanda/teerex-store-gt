@@ -1,0 +1,22 @@
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin: 2rem auto;
+}
+
+#cart-heading {
+    margin-bottom: 3rem;
+}
+
+#cart-total {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid #000;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+#cart-item-delete {
+    height: max-content;
+}

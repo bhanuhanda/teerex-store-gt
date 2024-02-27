@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
-import { FiList, FiShoppingCart } from "react-icons/fi";
+import { Link, useLocation } from "react-router-dom";
+import { FiShoppingCart } from "react-icons/fi";
 
 import './Header.css';
 
 function Header() {
+    const { pathname } = useLocation();
+    
     return (
         <div id="header-container">
             <div id="site-logo">
@@ -11,10 +13,10 @@ function Header() {
             </div>
             <div id="nav-links">
                 <div id="products-button">
-                    <Link to='/' className="link-active">Products{' '}<FiList /></Link>
+                    <Link to='/' className={pathname === '/' ? 'link-active' : undefined}>Products</Link>
                 </div>
                 <div id="cart-button">
-                    <Link to='/cart'>Cart{' '}<FiShoppingCart /></Link>
+                    <Link to='/cart' className={pathname === '/cart' ? 'link-active' : undefined}><FiShoppingCart /></Link>
                 </div>
             </div>
         </div>

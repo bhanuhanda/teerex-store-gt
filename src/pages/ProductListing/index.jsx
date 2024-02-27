@@ -8,14 +8,23 @@ import './ProductListing.css';
 // import RenderFilters from "../../components/RenderFilters";
 
 function Products() {
+  const data = useContext(DataContext);
+  const [filteredData, setFilteredData] = useState([]);
   const [filterLabels, setFilterLabels] = useState({});
   const [searchAndFilterBy, setSearchAndFilterBy] = useState({
     searchQuery: '',
     filterByItems: []
   });
-  
-  const data = useContext(DataContext);
-  const filteredData = data;
+
+  const filterString = (str, qry) => {
+    return str.toLowerCase().indexOf(qry.toLowerCase()) >= 0;
+  }
+
+  const setSearchQuery = (str) => {
+    const temp = JSON.parse(JSON.stringify(searchAndFilterBy));
+    temp.searchQuery = str;
+    setSearchAndFilterBy(temp);
+  }
 
   useEffect(() => {
     const buildFilters = (data) => {
@@ -29,13 +38,24 @@ function Products() {
     buildFilters(data); // handle edge case if data length = 0
   }, [data])
 
-  // useEffect(() => {
+  useEffect(() => {
+    const searchInData = (data, s) => {
+      return data.filter((record) => {
+        return filterString(record.name, s) || filterString(record.type, s) || filterString(record.color, s);
+      })
+    }
 
-  // }, [searchAndFilterBy.searchQuery, searchAndFilterBy.filterByItems])
-  
+    const s = searchAndFilterBy.searchQuery;
+    if(s !== '') {
+      setFilteredData(searchInData(data, s));
+    } else {
+      setFilteredData(data);
+    }
+  }, [searchAndFilterBy.searchQuery, searchAndFilterBy.filterByItems, data])
+
   return (
     <div id="products-page-wrapper">
-      <Search searchAndFilterBy={searchAndFilterBy} setSearchAndFilterBy={setSearchAndFilterBy} />
+      <Search searchQuery={searchAndFilterBy.searchQuery} setSearchQuery={(str) => setSearchQuery(str)} />
       {/* {Object.keys(filterLabels).length > 0 && 
         <RenderFilters 
           filterLabels={filterLabels} 
