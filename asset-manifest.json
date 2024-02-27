@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/teerex-store-gt/static/css/main.82b278ec.css",
-    "main.js": "/teerex-store-gt/static/js/main.39a994aa.js",
+    "main.css": "/teerex-store-gt/static/css/main.40b6fc4d.css",
+    "main.js": "/teerex-store-gt/static/js/main.2a716960.js",
     "static/js/592.9d668c3f.chunk.js": "/teerex-store-gt/static/js/592.9d668c3f.chunk.js",
     "index.html": "/teerex-store-gt/index.html",
-    "main.82b278ec.css.map": "/teerex-store-gt/static/css/main.82b278ec.css.map",
-    "main.39a994aa.js.map": "/teerex-store-gt/static/js/main.39a994aa.js.map",
+    "main.40b6fc4d.css.map": "/teerex-store-gt/static/css/main.40b6fc4d.css.map",
+    "main.2a716960.js.map": "/teerex-store-gt/static/js/main.2a716960.js.map",
     "592.9d668c3f.chunk.js.map": "/teerex-store-gt/static/js/592.9d668c3f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82b278ec.css",
-    "static/js/main.39a994aa.js"
+    "static/css/main.40b6fc4d.css",
+    "static/js/main.2a716960.js"
   ]
 }
